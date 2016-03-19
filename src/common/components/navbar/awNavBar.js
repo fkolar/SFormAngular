@@ -20,20 +20,9 @@ navBar.controller('NavBarController', function ($scope) {
 
     };
 
-    vm.registerStep = function (step) {
-        if (vm.steps.length === 0) {
-            vm.currentStep = step;
-            vm.currentIndex = 0;
-        }
-        vm.steps.push(step);
-    };
-
 
 
     $scope.$on('$destroy', function () {
-        vm.steps = [];
-        vm.currentStep = null;
-        vm.stepAnimations = null;
-        vm.currentAnimation = null;
+
     });
 });
