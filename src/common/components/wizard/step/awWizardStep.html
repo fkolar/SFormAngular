@@ -1,0 +1,8 @@
+<!--
+	In case we do not use reference to ui but we want to include HTML fragment inside the step
+	 todo: transclusion works just need to finish the swithing between ui-ref adn ng-click
+-->
+
+<div class="c-wiz-step-content" ng-if="wizStep.hasContent() && wizStep.isActive()" ng-transclude>
+</div>
+

@@ -1,0 +1,32 @@
+.c-wizard {
+  min-height: 300px;
+}
+
+
+.c-wizard-header {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.c-wizard-header a {
+  padding-right: 10px;
+  font-weight: normal;
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+.c-wiz-step-content {
+  padding: 5px;
+
+}
+
+.c-wizard-content {
+  background: #e4e4e4;
+  position: relative;
+  width: 100%;
+}

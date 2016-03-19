@@ -13,16 +13,15 @@ module.exports = {
     dev: 'www',
     release: 'dist',
 
+    srcJS: ['src/**/*.js'],
+    srcCSS: ['src/sform.app.scss'],
+    srcHTML: ['src/**/*.html'],
+    srcDev: ['www/js/**/*.js'],
     others: ['www/images/*.*'],
     resetDir: ['www/js', 'www/css', 'dist', 'www/lib', 'node_modules'],
     cleanJS: ['js/*.js'],
     cleanCSS: ['css/*.css'],
-    srcJS: ['src/app/**/*.js'],
-    srcCSS: ['src/my.app.scss'],
-    srcHTML: ['src/**/*.html'],
-    srcDev: ['www/js/**/*.js'],
     combineFiles: ['www/index.html'],
-
     testFiles: ['test/**/*.js'],
 
     versionData: {

@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('sFormApp.authoring', [
-])
+var authoring = angular.module('sFormApp.authoring', [
+    'component.wizard'
+]);
 
-.config(function ($stateProvider, $urlRouterProvider) {
+authoring.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('app.authoring', {
         abstract: true,
@@ -39,36 +40,36 @@ angular.module('sFormApp.authoring', [
         url: '/cust-notification',
         views: {
             'content': {
-                templateUrl: 'app/authoring/add-approver/add-approver-step.html',
+                templateUrl: 'app/authoring/cust-notification/cust-notification-step.html',
                 controller: 'CustomizeNotificationCtrl as custNoti'
             }
         }
     });
 
-})
+});
 
-.controller('AuthoringCtrl', function ($scope, $state) {
+authoring.controller('AuthoringCtrl', function ($scope, $state, $log, awHistory) {
     var vm = this;
     vm.data = {};
     vm.name = 'Authoring page';
     vm.fromLeft = false;
 
-    vm.steps = [
-        'app.authoring.create-form',
-        'app.authoring.add-approver',
-        'app.authoring.cust-notification'
-    ];
-
-    vm.toggleDirection = function(stepName) {
-        var fromIndex = vm.steps.indexOf($state.current.name);
-        var toIndex = vm.steps.indexOf(stepName);
-
-        vm.fromLeft = fromIndex > toIndex;
+    vm.next = function () {
+        $scope.$broadcast('wizard.nextStep');
     };
 
-    vm.stepTo = function(stepName) {
-        vm.toggleDirection(stepName);
-        $state.go(stepName);
+    vm.prev = function () {
+        $scope.$broadcast('wizard.prevStep');
+    };
+
+    vm.back = function () {
+        awHistory.goBack();
+    };
+
+    vm.stepChanged = function (index, numOfSteps) {
+        $log.info('Wizard step selected: ' + index);
+
+        vm.stepIndex = index;
     };
 
 });

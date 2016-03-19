@@ -1,0 +1,18 @@
+<div class="c-wizard">
+
+	<div class="c-wizard-header">
+
+		<a ui-sref-active="active"  ng-repeat="step in wizCtrl.steps track by step.stepName"
+		   ui-sref="{{step.contentRef}}" ng-click="wizCtrl.stepTo(step.stepName)">
+			<span class="wizard-step-num">{{$index + 1}}</span> {{step.stepTitle}}
+		</a>
+
+
+	</div>
+	<!-- transclude wizard steps so they can be rendered above-->
+	<div ng-transclude></div>
+
+	<div ui-view="content" class="c-wizard-content"
+	     ng-class="wizCtrl.currentAnimation"
+	     ng-if="!wizStep.hasContent()"></div>
+</div>

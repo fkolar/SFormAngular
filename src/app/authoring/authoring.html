@@ -1,11 +1,36 @@
-<h1>This is my wizard</h1>
+<br/>
+<button type="button" ng-click="authoring.back()">BACK</button>
+<button type="button" ng-click="authoring.prev()">Previous</button>
+<button type="button" ng-click="authoring.next()">next</button>
 
-<div class="nav-menu">
-	<a ui-sref-active="active" ui-sref=".create-form"><span>1</span> Create Form</a> |
-	<a ui-sref-active="active" ui-sref=".add-approver"><span>2</span> Add Approver</a> |
-	<a ui-sref-active="active" ui-sref=".cust-notification"><span>3</span> Customize Notification </a>
-</div>
+<!--<aw-nav-bar title="authoring.title"-->
+<!--top="true"-->
+<!--bottom="false"-->
+<!--next="authoring.next()"-->
+<!--previous="authoring.prev()"-->
+<!--save="authoring.save()">-->
 
+<!--<aw-nav-buttons>-->
+<!--<button type="button">Preview</button>-->
+<!--</aw-nav-buttons>-->
 
-<div ui-view="content" class="wizard-content"></div>
+<!--animation="slide or fadein" -->
+<aw-wizard on-step-changed="authoring.stepChanged(index, numOfSteps)" animation="slide">
+	<aw-wizard-step step-name="create-form"
+	                step-title="Create Form"
+	                content-ref="app.authoring.create-form">
+	</aw-wizard-step>
+
+	<aw-wizard-step step-name="add-approver"
+	                step-title="Add Approver"
+	                content-ref="app.authoring.add-approver">
+	</aw-wizard-step>
+
+	<aw-wizard-step step-name="cust-notification"
+	                step-title="Customize Notification"
+	                content-ref="app.authoring.cust-notification">
+	</aw-wizard-step>
+</aw-wizard>
+
+<!--</aw-nav-bar>-->
 

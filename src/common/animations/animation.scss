@@ -1,0 +1,98 @@
+.a-slide-in-left.ng-enter,
+.a-slide-in-left.ng-leave,
+.a-slide-in-right.ng-enter,
+.a-slide-in-right.ng-leave
+.a-fade-in.ng-enter,
+.a-fade-in.ng-leave {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  transition: 0.9s all ease;
+  -moz-transition: 0.9s all ease;
+  -webkit-transition: 0.9s all ease;
+
+}
+
+.a-slide-in-left.ng-enter {
+  -webkit-animation: slideInFromLeft 0.9s both ease-in-out;
+  -moz-animatio: slideInFromLeft 0.9s both ease-in-out;
+  animation: slideInFromLeft 0.9s both ease-in-out;
+}
+
+.a-slide-in-left.ng-leave {
+  -webkit-animatio: slideOutToLeft 0.9s both ease-in-out;
+  -moz-animatio: slideOutToLeft 0.9s both ease-in-out;
+  animation: slideOutToLeft 0.9s both ease-in-out;
+}
+
+.a-slide-in-right.ng-enter {
+  -webkit-animation: slideInFromRight 0.9s both ease-in-out;
+  -moz-animation: slideInFromRight 0.9s both ease-in-out;
+  animation: slideInFromRight 0.9s both ease-in-out;
+
+}
+
+.a-slide-in-right.ng-leave {
+  -webkit-animation: slideOutToRight 0.9s both ease-in-out;
+  -moz-animation: slideOutToRight 0.9s both ease-in-out;
+  animation: slideOutToRight 0.9s both ease-in-out;
+}
+
+.a-fade-in.ng-enter {
+  animation: 1s appear;
+}
+
+.a-fade-in.ng-leave {
+  animation: 1s disappear;
+}
+
+@-webkit-keyframes slideInFromLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideOutToLeft {
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideOutToRight {
+
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
