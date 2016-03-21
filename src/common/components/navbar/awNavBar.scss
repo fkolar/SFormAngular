@@ -1,0 +1,23 @@
+.c-nav-bar {
+  height: 30px;
+  width: 100%;
+  top: 10px;
+  background: #e4e4e4;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  .c-nav-bar-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .c-nav-bar-buttons {
+    display: inline-block;
+    float: right;
+    padding-right: 10px;
+
+    button {
+      margin-left: 10px;
+      height: 32px;
+    }
+  }
+}

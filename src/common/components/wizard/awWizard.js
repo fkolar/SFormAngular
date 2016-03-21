@@ -26,6 +26,7 @@ wizard.controller('WizardController', function ($scope, $state) {
     vm.currentAnimation = vm.stepAnimations.next;
 
     vm.$onInit = function () {
+        vm.steps = [];
         if (vm.showSteps === undefined) {
             vm.showSteps = true;
         }
@@ -114,7 +115,7 @@ wizard.controller('WizardController', function ($scope, $state) {
     });
 
     $scope.$on('$destroy', function () {
-        vm.steps = [];
+        vm.steps = null;
         vm.currentStep = null;
         vm.stepAnimations = null;
         vm.currentAnimation = null;

@@ -1,7 +1,8 @@
 'use strict';
 
 var authoring = angular.module('sFormApp.authoring', [
-    'component.wizard'
+    'component.wizard',
+    'component.nav-bar'
 ]);
 
 authoring.config(function ($stateProvider, $urlRouterProvider) {
@@ -61,6 +62,11 @@ authoring.controller('AuthoringCtrl', function ($scope, $state, $log, awHistory)
     vm.prev = function () {
         $scope.$broadcast('wizard.prevStep');
     };
+
+    vm.save = function () {
+        $log.info('SAVING ...');
+    };
+
 
     vm.back = function () {
         awHistory.goBack();
