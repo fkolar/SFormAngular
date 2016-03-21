@@ -37,6 +37,11 @@ navBar.controller('NavBarController', function ($scope) {
     };
 
 
+    // states
+    $scope.$on('navbar.buttons.activation', function (context, buttonName, activate) {
+        console.log('Activate deactivate' + buttonName + ', activate:' + activate);
+
+    });
 
     $scope.$on('$destroy', function () {
         vm.vm.showNextButton = null;

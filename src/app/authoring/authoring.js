@@ -55,12 +55,18 @@ authoring.controller('AuthoringCtrl', function ($scope, $state, $log, awHistory)
     vm.name = 'Authoring page';
     vm.fromLeft = false;
 
+
+    vm.init = function() {
+        $scope.$broadcast('navbar.buttons.activation', 'previous', false);
+
+    };
+
     vm.next = function () {
         $scope.$broadcast('wizard.nextStep');
     };
 
     vm.prev = function () {
-        $scope.$broadcast('wizard.prevStep');
+
     };
 
     vm.save = function () {
@@ -76,6 +82,10 @@ authoring.controller('AuthoringCtrl', function ($scope, $state, $log, awHistory)
         $log.info('Wizard step selected: ' + index);
 
         vm.stepIndex = index;
+
+        $scope.$broadcast('navbar.buttons.activation', 'previous', vm.stepIndex > 0);
     };
+
+    vm.init();
 
 });
