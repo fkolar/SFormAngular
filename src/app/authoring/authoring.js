@@ -66,7 +66,7 @@ authoring.controller('AuthoringCtrl', function ($scope, $state, $log, awHistory)
     };
 
     vm.prev = function () {
-
+        $scope.$broadcast('wizard.prevStep');
     };
 
     vm.save = function () {
