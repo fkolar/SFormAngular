@@ -1,16 +1,12 @@
 aw-split-view-pane {
   font-size: 13px;
   background-color: #FFF;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
   border: 1px solid transparent;
 }
 
 aw-split-view-pane:first-of-type {
-  margin-right: 10px;
-  width: 75%;
+  margin-right: 15px;
 }
 
-aw-split-view-pane:last-of-type {
-  width: 25%;
-}
 

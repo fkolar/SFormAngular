@@ -1,4 +1,6 @@
+<div split-view-width>
+	<div ng-transclude ng-if="splitPaneCtrl.hasContent">
+	</div>
 
-<ng-transclude></ng-transclude>
-
-<div ui-view="splitPaneCtrl.contentRef" ng-if="!splitPaneCtrl.hasContent"></div>
+	<div ui-view="splitPaneCtrl.contentRef" ng-if="!splitPaneCtrl.hasContent"></div>
+</div>

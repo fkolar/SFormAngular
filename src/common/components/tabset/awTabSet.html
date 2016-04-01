@@ -1,0 +1,11 @@
+<div class="c-tabset">
+	<ul class="c-tab-nav c-tab-top">
+
+		<li ng-repeat="panel in tabCtrl.tabs" ng-class="{'active': panel.selected}">
+			<a href="" ng-click="tabCtrl.selectTab(panel)">
+				{{panel.title}}
+			</a>
+		</li>
+	</ul>
+	<div class="c-tab-content" ng-transclude></div>
+</div>

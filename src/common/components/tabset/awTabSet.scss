@@ -1,0 +1,37 @@
+.c-tabset {
+  padding: 20px 15px;
+
+  .c-tab-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      float: left;
+      border: 1px solid #a4a4a4;
+      border-bottom-width: 0px;
+      background-color: #eaeaea;
+      color: #696969;
+      padding: 8px;
+      margin-right: 2px;
+      margin-left: 2px;
+
+      &.active {
+        background-color: #FFF;
+        color: #000;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  .c-tab-content {
+    border-top: 1px solid #757575;
+    clear: both;
+    padding: 0 1em;
+  }
+
+}

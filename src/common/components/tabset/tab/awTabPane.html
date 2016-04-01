@@ -1,0 +1,4 @@
+<div class="c-tab-pane" ng-show="tabPaneCtrl.selected && !tabPaneCtrl.hasContent()" ng-transclude></div>
+
+<div class="c-tab-pane" ng-show="tabPaneCtrl.selected && tabPaneCtrl.hasContent()"
+     ui-view="{{tabPaneCtrl.contentRef}}"></div>

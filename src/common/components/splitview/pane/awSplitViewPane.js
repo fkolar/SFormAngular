@@ -37,3 +37,22 @@ splitView.controller('SplitViewPaneController', function ($scope) {
         vm.width = null;
     });
 });
+
+
+
+splitView.directive('splitViewWidth', function() {
+    return {
+        restrict: 'A',
+        compile: function(elememt, attributes) {
+            var parent = elememt.parent();
+            if (parent && parent.length > 0) {
+                var content = elememt.html();
+                elememt.remove();
+                parent.append(content);
+
+                parent.css('width', parent.attr('width'));
+                parent.removeAttr('width');
+            }
+        }
+    };
+});

@@ -1,4 +1,5 @@
 <aw-split-view direction="horizontal">
+
 	<aw-split-view-pane width="75%">
 		<div class="designer-content">
 			<div class="designer-cnt-empty">
@@ -7,11 +8,25 @@
 					First, choose a template.
 				</span>
 			</div>
-
 		</div>
+
 	</aw-split-view-pane>
 
 	<aw-split-view-pane  width="25%">
-			right
+			<aw-tab-set on-tab-selected="createForm.onTabSelected(title)">
+				<!-- example with reference-->
+				<aw-tab-pane title="Templates" content-ref="templates">
+				</aw-tab-pane>
+
+				<!-- example with content-->
+				<aw-tab-pane title="Properties">
+					<h3>Properties by content</h3>
+					<p>
+						This is content for <br/>
+						Properties<br/>
+					</p>
+				</aw-tab-pane>
+
+			</aw-tab-set>
 	</aw-split-view-pane>
 </aw-split-view>

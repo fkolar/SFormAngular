@@ -3,9 +3,9 @@
 var authoring = angular.module('sFormApp.authoring');
 
 
-authoring.controller('CreateFormCtrl', function ($scope) {
+authoring.controller('CreateFormTemplatesCtrl', function ($scope) {
     var vm = this;
-    vm.name = ' Create Form Page';
+    vm.templates = ["Template 1", "Template 2"];
 
 
     vm.onTabSelected = function (title) {

@@ -3,7 +3,8 @@
 var authoring = angular.module('sFormApp.authoring', [
     'component.wizard',
     'component.nav-bar',
-    'component.split-view'
+    'component.split-view',
+    'component.tab-set'
 ]);
 
 authoring.config(function ($stateProvider, $urlRouterProvider) {
@@ -22,10 +23,15 @@ authoring.config(function ($stateProvider, $urlRouterProvider) {
             'content': {
                 templateUrl: 'app/authoring/create-form/create-form-step.html',
                 controller: 'CreateFormCtrl as createForm'
-            }
+            },
+            'templates@app.authoring.create-form': {
+                templateUrl: 'app/authoring/create-form/templates/templates.html',
+                controller: 'CreateFormTemplatesCtrl as createTemplForm'
+            },
+
+
         }
     });
-
 
     $stateProvider.state('app.authoring.add-approver', {
         url: '/add-approver',
@@ -36,7 +42,6 @@ authoring.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     });
-
 
     $stateProvider.state('app.authoring.cust-notification', {
         url: '/cust-notification',
