@@ -1,0 +1,26 @@
+.c-split-view-container {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.c-split-view-content-horizontal {
+  @extend .c-split-view-container;
+
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.c-split-view-content-vertical {
+  @extend  .c-split-view-container;
+
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+
+
+
