@@ -12,10 +12,17 @@ navBar.component('awNavBar', {
         previous: '&',
         save: '&'
     },
-    controller: 'NavBarController as navNarCtrl',
+    controller: 'NavBarController as navCtrl',
     templateUrl: 'common/components/navbar/awNavBar.html'
 });
 
+/**
+ *  Ideally this needs to be refactored so it accepts navigation buttons and it can be flexibile
+ *  and then create extra separate component e.g. PageNavBar that will utilize this nav bar component
+ *  and reuse some functionality
+ *  Because the form it is work now even I call it nav bar its not really a nav bar its more wizard
+ *  navigation bar.
+ */
 navBar.controller('NavBarController', function ($scope) {
     var vm = this;
 

@@ -2,7 +2,8 @@
 
 var authoring = angular.module('sFormApp.authoring', [
     'component.wizard',
-    'component.nav-bar'
+    'component.nav-bar',
+    'component.split-view'
 ]);
 
 authoring.config(function ($stateProvider, $urlRouterProvider) {

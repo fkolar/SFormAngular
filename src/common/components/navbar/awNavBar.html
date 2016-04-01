@@ -1,16 +1,24 @@
 <div class="c-nav-bar">
-	<span class="c-nav-bar-title">{{navNarCtrl.title}}</span>
 
-	<div class="c-nav-bar-buttons">
-		<button type="button" ng-click="navNarCtrl.buttonAction('previous')"
-		        ng-show="navNarCtrl.showPrevButton">Previous</button>
+	<div class="c-nav-bar-header">
+		<span class="c-nav-bar-title">{{navCtrl.title}}</span>
 
-		<button type="button" ng-click="navNarCtrl.buttonAction('next')"
-		        ng-show="navNarCtrl.showNextButton">Next</button>
+		<div class="c-nav-bar-buttons">
+			<button type="button" ng-click="navCtrl.buttonAction('previous')"
+			        ng-show="navCtrl.showPrevButton">Previous
+			</button>
 
-		<button type="button" ng-click="navNarCtrl.buttonAction('save')"
-		        ng-show="navNarCtrl.showSaveButton">Save</button>
+			<button type="button" ng-click="navCtrl.buttonAction('next')"
+			        ng-show="navCtrl.showNextButton">Next
+			</button>
+
+			<button type="button" ng-click="navCtrl.buttonAction('save')"
+			        ng-show="navCtrl.showSaveButton">Save
+			</button>
+		</div>
 	</div>
 </div>
 
-<div ng-transclude></div>
+<div class="c-nav-content" ng-transclude></div>
+
+
